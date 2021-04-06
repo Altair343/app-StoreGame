@@ -6,7 +6,8 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "dev": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "eject": "expo eject"
   },
   "dependencies": {
     "expo": "~40.0.0",
