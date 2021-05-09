@@ -1,8 +1,9 @@
-import React from 'react';
-import StackNavigator from './Components/Navigator/StackNavigator';
+import React,{useEffect} from 'react';
+import Navigator from './Components/Navigator';
 
 export default function App() {
+
   return (
-    <StackNavigator />
+    <Navigator />
   );
 }
