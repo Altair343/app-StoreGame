@@ -7,4 +7,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    formControl: {
+        width: '95%',
+        marginHorizontal: 10,
+        marginBottom: 10,
+    },
 });
