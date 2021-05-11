@@ -46,4 +46,13 @@ const Sales = async (sale) => {
     }
 }
 
-export default { Singnin, Singup, Sales };
+const GetAll = async () => {
+    try {
+        const { data } = await axios.get(`${urlBase}/products`)
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+export default { Singnin, Singup, Sales, GetAll };

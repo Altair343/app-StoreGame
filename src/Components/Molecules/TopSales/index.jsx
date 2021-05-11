@@ -24,6 +24,7 @@ class TopSales extends Component {
         const data = await Api.Sales(5);
         if (data.response) {
             this.setState({ Sales: data.data });
+            const { Sales } = this.state;
         } else {
             console.log(data);
         }

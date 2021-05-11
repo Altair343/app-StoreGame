@@ -10,8 +10,12 @@ const Drawer = createDrawerNavigator();
 function DrawerNavigator() {
 
     return (
-        <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />} >
+        <Drawer.Navigator
+            headerMode="screen"
+            drawerContent={props => <DrawerContent {...props} />}
+        >
             <Drawer.Screen name="Home" component={Routes.Home} />
+            <Drawer.Screen name="Search" component={Routes.Search} />
         </Drawer.Navigator>
     );
 }
