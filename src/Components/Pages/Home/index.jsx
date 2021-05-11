@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Text } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 // Styles
 import { styles } from './styles';
@@ -26,14 +26,13 @@ class Home extends Component {
         })
     }
 
-
     render() {
         return (
             <View style={styles.container}>
                 <ScrollView>
                     <BannerT1 />
-                    <TopSales />
-                    <ListAllGames />
+                    <TopSales navigation={this.props.navigation} />
+                    <ListAllGames navigation={this.props.navigation} />
                 </ScrollView>
             </View>
         )

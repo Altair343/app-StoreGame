@@ -36,9 +36,17 @@ function StackNavigator() {
 					},
 				})}
 			/>
+			
 			<Stack.Screen
 				name="Home"
 				component={Home}
+				options={{
+					headerShown: false,
+				}}
+			/>
+			<Stack.Screen
+				name="DetailsGame"
+				component={Routes.DetailsGame}
 				options={{
 					headerShown: false,
 				}}

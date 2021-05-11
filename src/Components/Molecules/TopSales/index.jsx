@@ -31,7 +31,7 @@ class TopSales extends Component {
     }
 
     actionCard = async (id) => {
-        console.log(id);
+        this.props.navigation.navigate('DetailsGame', { idGame: id });
     }
 
     componentDidMount() {
