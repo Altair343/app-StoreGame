@@ -7,7 +7,9 @@ import varStyles from '../../../assets/styles/VarStyles';
 
 import TopSales from '../../Molecules/TopSales';
 import ListAllGames from '../../Molecules/ListAllGames';
+import Category from '../../Molecules/Category';
 import BannerT1 from '../../Molecules/BannerT1';
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -33,6 +35,9 @@ class Home extends Component {
                     <BannerT1 />
                     <TopSales navigation={this.props.navigation} />
                     <ListAllGames navigation={this.props.navigation} />
+                    <Category navigation={this.props.navigation} category={'Acción'} />
+                    <Category navigation={this.props.navigation} category={'Anime'} />
+                    <Category navigation={this.props.navigation} category={'Parkur'} />
                 </ScrollView>
             </View>
         )

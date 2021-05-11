@@ -1,10 +1,30 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
 
 // Styles
 import { styles } from './styles';
 
-const Search = ({ navigation }) => {
+//Api
+import Api from '../../Api';
+
+
+const Search = ({ navigation, route }) => {
+    const { idGame } = route.params;
+    const [game, setGame] = useState({});
+
+    const GameData = async () => {
+        const data = await Api.GetOne(idGame);
+        if (data.response) {
+            setGame(data.data);
+        } else {
+            console.log(data);
+        }
+    }
+
+    useEffect(() => {
+        GameData();
+
+    }, [])
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -21,9 +41,12 @@ const Search = ({ navigation }) => {
     }, [navigation])
     return (
         <View style={styles.container}>
-            <Text>Detalles</Text>
+            
         </View>
     )
 }
 
 export default Search;
+
+
+{/* <Text> {game.title ? `${game.title}` : ``}</Text> */}
