@@ -55,4 +55,22 @@ const GetAll = async () => {
     }
 }
 
-export default { Singnin, Singup, Sales, GetAll };
+const Categories = async (category) => {
+    try {
+        const { data } = await axios.get(`${urlBase}/products/category/${category}`)
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+const GetOne = async (id) => {
+    try {
+        const { data } = await axios.get(`${urlBase}/products/${id}`)
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+export default { Singnin, Singup, Sales, GetAll, Categories, GetOne };
