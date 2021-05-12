@@ -1,6 +1,7 @@
 const VarStyles = {
     color: {
-        primaryColor: '#ed3b3b',
+        primaryColor: '#ed1249',
+        secondaryColor: '#AC010A',
         secondaryColor: '#AC010A',
     },
     grey: {

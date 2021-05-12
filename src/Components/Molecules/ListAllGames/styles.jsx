@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import varStyles from '../../../assets/styles/VarStyles';
 
 export const styles = StyleSheet.create({
     separator: {
@@ -10,10 +11,11 @@ export const styles = StyleSheet.create({
         paddingVertical: 5,
         paddingHorizontal: 10,
     },
-    titleTop:{
+    titleTop: {
         fontSize: 20,
-        fontWeight:'bold',
-        paddingVertical:5,
-        paddingLeft:10
+        fontWeight: 'bold',
+        paddingVertical: 5,
+        paddingLeft: 10,
+        color:varStyles.grey.G400,
     },
 });

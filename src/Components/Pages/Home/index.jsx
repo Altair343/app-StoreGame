@@ -18,9 +18,9 @@ class Home extends Component {
         this.props.navigation.setOptions({
             title: "Home",
             headerStyle: {
-                backgroundColor: varStyles.color.primaryColor,
+                backgroundColor: varStyles.grey.G900,
             },
-            headerTintColor: varStyles.grey.white,
+            headerTintColor: varStyles.grey.G600,
             headerTitleStyle: {
                 fontWeight: 'bold',
             },

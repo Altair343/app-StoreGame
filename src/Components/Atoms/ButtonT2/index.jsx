@@ -3,15 +3,15 @@ import { TouchableOpacity, Text } from 'react-native';
 
 import { styles } from './styles';
 
-function ButtonT1({ title, action }) {
+function Button2({ title, action }) {
     return (
         <TouchableOpacity
             style={styles.button}
             onPress={action}
         >
-            <Text style={styles.textButton}>{title}</Text>
+        <Text style={styles.textButton}>{title}</Text>
         </TouchableOpacity>
     );
 }
 
-export default ButtonT1;
+export default Button2;

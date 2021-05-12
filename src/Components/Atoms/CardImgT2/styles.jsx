@@ -2,8 +2,9 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     cartImg: {
-        width: 100,
-        height: 150,
+        width: 125,
+        height: 180,
         borderRadius: 5,
     },
+   
 });

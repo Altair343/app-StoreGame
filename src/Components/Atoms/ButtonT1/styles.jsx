@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
 		alignItems: 'center',
     },
     textButton:{
-        color: '#FFF',
+        color: varStyles.grey.G900,
 		fontSize: 14,
 		fontWeight: 'bold',
     }

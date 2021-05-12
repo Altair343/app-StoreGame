@@ -6,7 +6,7 @@ import varStyles from '../../../assets/styles/VarStyles';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: varStyles.grey.white,
+        backgroundColor: varStyles.grey.G900,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -27,6 +27,6 @@ export const styles = StyleSheet.create({
         color: varStyles.color.primaryColor,
     },
     textLinkDisable: {
-        color: varStyles.grey.G600,
+        color: varStyles.grey.G700,
     },
 });

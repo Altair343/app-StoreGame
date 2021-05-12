@@ -36,7 +36,7 @@ export function DrawerContent(props) {
                         if (result) {
                             await SecureStore.deleteItemAsync('token');
                             console.log('Sesión cerrada');
-                            props.navigation.navigate('Login')
+                            props.navigation.navigate('Login',{stateloader: false })
                         }
                     }}
                 />

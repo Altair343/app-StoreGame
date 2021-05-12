@@ -10,10 +10,12 @@ import Loading from '../../Atoms/Loading';
 import Api from '../../Api';
 
 const Login = ({ navigation }) => {
+
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
     const [messageError, setMessageError] = useState(null);
     const [loading, setLoading] = useState(true);
+
 
     const signin = async () => {
         //falta validar campos vacios

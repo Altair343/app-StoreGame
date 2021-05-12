@@ -3,10 +3,12 @@ import { TouchableOpacity, Image } from 'react-native';
 
 import { styles } from './styles';
 
+
 function Button({ imgURL, action }) {
     return (
         <TouchableOpacity
-            onPress={action}
+        onPress={action} 
+            
         >
             <Image
                 style={styles.cartImg}

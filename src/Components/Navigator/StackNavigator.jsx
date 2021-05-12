@@ -28,15 +28,22 @@ function StackNavigator() {
 				options={(nav) => ({
 					title: "Registro",
 					headerStyle: {
-						backgroundColor: varStyles.color.primaryColor,
+						backgroundColor: varStyles.grey.G900,
 					},
-					headerTintColor: '#FFF',
+					headerTintColor: varStyles.grey.G600,
 					headerTitleStyle: {
 						fontWeight: 'bold',
 					},
 				})}
 			/>
-			
+			<Stack.Screen
+				name="SearchCategory"
+				component={Routes.SearchCategory}
+				options={{
+					headerShown: false,
+				}}
+			/>
+
 			<Stack.Screen
 				name="Home"
 				component={Home}
@@ -51,6 +58,7 @@ function StackNavigator() {
 					headerShown: false,
 				}}
 			/>
+
 		</Stack.Navigator>
 	);
 }

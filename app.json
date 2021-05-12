@@ -1,9 +1,9 @@
 {
-  "name": "maquetado1",
-  "displayName": "maquetado1",
+  "name": "AppGameStore",
+  "displayName": "AppGameStore",
   "expo": {
-    "name": "maquetado1",
-    "slug": "maquetado1",
+    "name": "AppGameStore",
+    "slug": "AppGameStore",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
