@@ -37,7 +37,7 @@ class Home extends Component {
                     <ListAllGames navigation={this.props.navigation} />
                     <Category navigation={this.props.navigation} category={'Acción'} />
                     <Category navigation={this.props.navigation} category={'Anime'} />
-                    <Category navigation={this.props.navigation} category={'Parkur'} />
+                    <Category navigation={this.props.navigation} category={'Rol'} />
                 </ScrollView>
             </View>
         )
