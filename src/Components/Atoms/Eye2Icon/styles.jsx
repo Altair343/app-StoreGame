@@ -1,0 +1,11 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+    icon: {
+        width: 20,
+        height: 20,
+        marginLeft:4,
+        marginRight:3,
+    },
+
+});

@@ -10,7 +10,6 @@ import varStyles from '../../../assets/styles/VarStyles';
 function StripeIcon() {
     return (
         <View style={styles.icon}>
-
             <Svg
                 aria-hidden="true"
                 data-prefix="fab"
