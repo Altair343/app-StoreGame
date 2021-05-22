@@ -16,10 +16,17 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     title: {
+        width: '63%',
         color: varStyles.grey.G500,
         fontWeight: 'bold',
         fontSize: 20,
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
+    },
+    price: {
+        color: varStyles.grey.G500,
+        fontWeight: 'bold',
+        fontSize: 20,
+
     },
     detailsTitle: {
         color: varStyles.grey.G500,
@@ -36,5 +43,38 @@ export const styles = StyleSheet.create({
     categories: {
         display: 'flex',
         flexDirection: 'row',
+    },
+    containerModal: {
+        backgroundColor: varStyles.grey.white,
+    },
+    modalize__content: {
+        zIndex: 5,
+        marginTop: 'auto',
+        backgroundColor: varStyles.grey.G900,
+        borderTopLeftRadius: 12,
+        borderTopRightRadius: 12,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 10 },
+        shadowOpacity: 0.1,
+        shadowRadius: 12,
+        elevation: 4,
+    },
+    sectionInfo: {
+        display: 'flex',
+        flexDirection: 'row',
+        borderBottomWidth: 1,
+        borderTopWidth: 1,
+        paddingVertical: 10,
+        borderColor: varStyles.grey.G600,
+    },
+    sectionInfo2: {
+        display: 'flex',
+        flexDirection: 'row',
+        borderBottomWidth: 1,
+        paddingVertical: 10,
+        borderColor: varStyles.grey.G600,
+    },
+    sectionPay: {
+        paddingHorizontal: 20,
     },
 });

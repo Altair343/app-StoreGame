@@ -1,13 +1,18 @@
 import axios from 'axios';
-
+import * as SecureStore from 'expo-secure-store';
 
 const urlBase = 'http://192.168.1.65:4000/api';
 
-/* const config = {
-    headers: {
-        Authorization: `Bearer ${userLogged}`
+
+const getToken = async () => {
+    let token = await SecureStore.getItemAsync('token');
+    return {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
     }
-} */
+}
+
 
 /* {
     "username": "Mei",
@@ -73,4 +78,16 @@ const GetOne = async (id) => {
     }
 }
 
-export default { Singnin, Singup, Sales, GetAll, Categories, GetOne };
+
+const Payment = async (dataPayment) => {
+    try {
+        const config = await getToken();
+
+        const { data } = await axios.post(`${urlBase}/users/payment`, dataPayment, config)
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+export default { Singnin, Singup, Sales, GetAll, Categories, GetOne, Payment };
