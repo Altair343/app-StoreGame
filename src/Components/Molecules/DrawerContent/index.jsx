@@ -25,6 +25,11 @@ export function DrawerContent(props) {
                         labelStyle={styles.textMenuItem}
                         onPress={() => { props.navigation.navigate('Search') }}
                     />
+                      <DrawerItem
+                        label="Biblioteca"
+                        labelStyle={styles.textMenuItem}
+                        onPress={() => { props.navigation.navigate('Library') }}
+                    />
                 </View>
             </DrawerContentScrollView>
             <View>

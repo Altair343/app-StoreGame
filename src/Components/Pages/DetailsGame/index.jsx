@@ -82,6 +82,18 @@ const Search = ({ navigation, route }) => {
                 onClose();
                 Vibration.vibrate();
                 Alert.alert("Pagado", "Pago Completado");
+                Alert.alert(
+                    "Pagado",
+                    "Pago Completado",
+                    [
+                        {
+                            text: "OK", onPress: async () => {
+                                navigation.navigate('Library')
+                            }
+                        }
+                    ]
+                );
+
                 Vibration.cancel();
 
             } else {
@@ -100,12 +112,14 @@ const Search = ({ navigation, route }) => {
                         ]
                     );
                 } else {
-                    Alert.alert("Error", "Ocurrio un error con el servidor");
+                    console.log(data.error);
+                    Alert.alert("Error 1", "Ocurrio un error con el servidor");
                 }
             }
 
         } catch (error) {
-            Alert.alert("Error", "Ocurrio un error con el servidor");
+            console.log(error);
+            Alert.alert("Error 2", "Ocurrio un error con el servidor");
         }
     }
     const onOpen = () => {

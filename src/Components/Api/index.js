@@ -90,4 +90,14 @@ const Payment = async (dataPayment) => {
     }
 }
 
-export default { Singnin, Singup, Sales, GetAll, Categories, GetOne, Payment };
+const LibraryUser = async () => {
+    try {
+        const config = await getToken();
+        const { data } = await axios.post(`${urlBase}/users/library`,{ } ,config)
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+export default { Singnin, Singup, Sales, GetAll, Categories, GetOne, Payment, LibraryUser };

@@ -16,6 +16,7 @@ function DrawerNavigator() {
         >
             <Drawer.Screen name="Home" component={Routes.Home} />
             <Drawer.Screen name="Search" component={Routes.Search} />
+            <Drawer.Screen name="Library" component={Routes.Library} />
         </Drawer.Navigator>
     );
 }
