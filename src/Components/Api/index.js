@@ -93,11 +93,42 @@ const Payment = async (dataPayment) => {
 const LibraryUser = async () => {
     try {
         const config = await getToken();
-        const { data } = await axios.post(`${urlBase}/users/library`,{ } ,config)
+        const { data } = await axios.post(`${urlBase}/users/library`, {}, config)
         return data;
     } catch (error) {
         return error.response.data;
     }
 }
 
-export default { Singnin, Singup, Sales, GetAll, Categories, GetOne, Payment, LibraryUser };
+const VerifyToken = async () => {
+    try {
+        const config = await getToken();
+        const { data } = await axios.post(`${urlBase}/users/verifyToken`, {}, config)
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+const Search = async (word) => {
+    try {
+        const config = await getToken();
+        const { data } = await axios.post(`${urlBase}/products/search`, { word }, config);
+        return data;
+    } catch (error) {
+        return error.response.data;
+    }
+}
+
+export default {
+    Singnin,
+    Singup,
+    Sales,
+    GetAll,
+    Categories,
+    GetOne,
+    Payment,
+    LibraryUser,
+    VerifyToken,
+    Search
+};

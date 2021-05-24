@@ -7,6 +7,7 @@ import { styles } from './styles';
 import ButtonT1 from '../../Atoms/ButtonT1';
 import InputT1 from '../../Atoms/InputT1';
 import Loading from '../../Atoms/Loading';
+
 import Api from '../../Api';
 
 const Login = ({ navigation }) => {
@@ -54,9 +55,29 @@ const Login = ({ navigation }) => {
     const verification = async () => {
         let result = await SecureStore.getItemAsync('token');
         if (result) {
-            navigation.navigate('Home');
+
+            try {
+
+                const verifyTok = await Api.VerifyToken();
+
+                if (verifyTok.code == "token/verify") {
+                    navigation.navigate('Home');
+
+                } else {
+                    await SecureStore.deleteItemAsync('token');
+                    setLoading(false);
+
+                }
+    
+            } catch (error) {
+                await SecureStore.deleteItemAsync('token');
+                setLoading(false);
+
+            }
+
         } else {
             setLoading(false);
+            
         }
     }
 
