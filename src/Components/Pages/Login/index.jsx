@@ -10,12 +10,18 @@ import Loading from '../../Atoms/Loading';
 
 import Api from '../../Api';
 
-const Login = ({ navigation }) => {
+const Login = ({ navigation, route }) => {
 
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
     const [messageError, setMessageError] = useState(null);
     const [loading, setLoading] = useState(true);
+
+
+    //mejorar esta sección
+    setTimeout(() => {
+        setLoading(false);
+    }, 15000);
 
 
     const signin = async () => {
@@ -77,7 +83,6 @@ const Login = ({ navigation }) => {
 
         } else {
             setLoading(false);
-            
         }
     }
 
