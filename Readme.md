@@ -48,5 +48,5 @@ yarn start
 ```
 
 ## Construir aplicación
-Para contruir la aplicación puede hacerlo de la manera tradicional con Android Studio
+Para construir la aplicación puede hacerlo de la manera tradicional con Android Studio
 o con [expo](https://docs.expo.io/distribution/building-standalone-apps/)
