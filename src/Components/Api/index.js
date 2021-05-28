@@ -1,8 +1,7 @@
 import axios from 'axios';
 import * as SecureStore from 'expo-secure-store';
 
-const urlBase = 'http://192.168.1.65:4000/api';
-
+const urlBase = 'url';
 
 const getToken = async () => {
     let token = await SecureStore.getItemAsync('token');
@@ -12,13 +11,6 @@ const getToken = async () => {
         }
     }
 }
-
-
-/* {
-    "username": "Mei",
-    "email": "mei@api.com",
-    "password": "12345678"
-} */
 
 const Singnin = async (email, password) => {
     try {
@@ -77,7 +69,6 @@ const GetOne = async (id) => {
         return error.response.data;
     }
 }
-
 
 const Payment = async (dataPayment) => {
     try {

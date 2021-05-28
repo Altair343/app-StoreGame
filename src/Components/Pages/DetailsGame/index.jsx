@@ -37,7 +37,7 @@ const Search = ({ navigation, route }) => {
 
     const card = async () => {
         Stripe.setOptionsAsync({
-            publishableKey: 'pk_test_51IrX6tKQ9Vem9yTMgENwGG8UDVPmJCcX4QdGNdJdKnVVuYMtxoFADMAu6dR59jUO5pgVHPp87U7OjHrzqCMw3Woz00c6zy9iuX', // Your key
+            publishableKey: 'pk_test_00', // Your key
             androidPayMode: 'test', // [optional] used to set wallet environment (AndroidPay)
         });
 
