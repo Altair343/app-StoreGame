@@ -1,6 +1,7 @@
 # App del proyecto StoreGame
 
 [Api](https://github.com/Altair343/api-StoreGame)
+
 [Dashboard](https://github.com/Altair343/dashboard-StoreGame)
 
 ### Detalles
